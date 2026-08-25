@@ -1,0 +1,15 @@
+services:
+  gateway:
+    build:
+      args:
+        - GATEWAY_PORT=${GATEWAY_PORT}
+      context: .
+      dockerfile: docker/gateway.Dockerfile
+    network_mode: host
+
+  wagering-worker:
+    build:
+      context: .
+      dockerfile: docker/wagering-worker.Dockerfile
+    deploy:
+      replicas: 5
