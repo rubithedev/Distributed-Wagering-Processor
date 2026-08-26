@@ -13,6 +13,7 @@ WORKDIR /app
 
 COPY --from=build /build/dist ./dist
 COPY package.json bun.lock ./
+COPY swagger-docs ./
 RUN bun install --frozen-lockfile --production
 
 ARG GATEWAY_PORT
