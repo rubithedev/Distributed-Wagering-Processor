@@ -1,6 +1,8 @@
 {
   "name": "public",
-  "namespaces": ["public"],
+  "namespaces": [
+    "public"
+  ],
   "tables": [
     {
       "name": "wallet",
@@ -17,7 +19,7 @@
           "length": null,
           "precision": null,
           "scale": null,
-          "default": null,
+          "default": "gen_random_uuid()",
           "comment": null,
           "collation": null,
           "enumItems": [],
@@ -26,7 +28,9 @@
       },
       "indexes": [
         {
-          "columnNames": ["id"],
+          "columnNames": [
+            "id"
+          ],
           "composite": false,
           "constraint": true,
           "keyName": "wallet_pkey",
