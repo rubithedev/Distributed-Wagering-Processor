@@ -11,7 +11,9 @@ describe('WageringWorkerController', () => {
       providers: [WageringWorkerService],
     }).compile();
 
-    wageringWorkerController = app.get<WageringWorkerController>(WageringWorkerController);
+    wageringWorkerController = app.get<WageringWorkerController>(
+      WageringWorkerController,
+    );
   });
 
   describe('root', () => {

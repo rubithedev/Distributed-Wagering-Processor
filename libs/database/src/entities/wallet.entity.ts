@@ -1,8 +1,8 @@
-import { defineEntity, type InferEntity, p } from "@mikro-orm/core";
-import { v4 } from "uuid";
+import { defineEntity, type InferEntity, p } from '@mikro-orm/core';
+import { v4 } from 'uuid';
 
 export const WalletSchema = defineEntity({
-  name: "Wallet",
+  name: 'Wallet',
   properties: {
     id: p
       .uuid()
