@@ -1,6 +1,8 @@
 import { defineConfig } from '@mikro-orm/postgresql';
 import { Migrator } from '@mikro-orm/migrations';
 import { WalletSchema } from './entities/wallet.entity';
+import { WagerTransactionSchema } from './entities/wager-transaction.entity';
+import { LedgerSchema } from './entities/ledger.entity';
 
 // Yep, should be true as far as it's told to be false
 const mikroormDebugMode =
@@ -17,7 +19,7 @@ export const config = defineConfig({
     pathTs: './libs/database/migrations',
   },
 
-  entities: [WalletSchema],
+  entities: [WalletSchema, WagerTransactionSchema, LedgerSchema],
 
   // TODO: Remove.
   debug: mikroormDebugMode,
