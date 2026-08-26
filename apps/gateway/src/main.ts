@@ -37,7 +37,7 @@ async function bootstrap() {
 
   if (process.env.ENABLE_API_DOC === 'true') {
     const document = SwaggerModule.createDocument(app, configApiDoc);
-    writeFileSync('./docs/openapi.json', JSON.stringify(document));
+    writeFileSync('./swagger-docs/openapi.json', JSON.stringify(document));
     SwaggerModule.setup('api-docs', app, document);
   }
 
