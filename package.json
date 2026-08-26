@@ -17,7 +17,9 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "bun --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./apps/distributed-wagering-processor/test/jest-e2e.json"
+    "test:e2e": "jest --config ./apps/distributed-wagering-processor/test/jest-e2e.json",
+    "database:create-migration": "./scripts/migrate-database.sh",
+    "database:apply-migrations": "./scripts/apply-migrations.sh"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
