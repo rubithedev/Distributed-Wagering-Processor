@@ -6,6 +6,16 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     network_mode: host
 
+  ministack:
+    image: ministackorg/ministack:1.5.1
+    container_name: ministack
+    ports:
+      - "4566:4566"
+    environment:
+      - LOG_LEVEL=INFO
+    volumes:
+      - .docker/init-scripts/ministack:/docker-entrypoint-initaws.d
+
   gateway:
     build:
       args:
