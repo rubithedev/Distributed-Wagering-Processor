@@ -1,4 +1,11 @@
 services:
+  postgres:
+    container_name: wagering-db
+    image: postgres:18.4
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    network_mode: host
+
   gateway:
     build:
       args:
